@@ -432,10 +432,10 @@ def main():
     visualize_clusters_and_exit_3D(points_in_gap_3D, labels, exit_cluster)
 
     # 2D Hierarchical Clustering
-    start_time_kmeans = time.time()
+    start_time_clustering = time.time()
     labels, exit_cluster = hierarchical_clustering_and_exit_detection(points_in_gap, n_clusters=n_3d_clusters)
-    end_time_kmeans = time.time()
-    print(f"Time taken for hierarchical clustering: {end_time_kmeans - start_time_kmeans} seconds")
+    end_time_clustering = time.time()
+    print(f"Time taken for hierarchical clustering: {end_time_clustering - start_time_clustering} seconds")
 
     # Visualize the clusters
     visualize_clusters_with_exit(points_in_gap, labels, exit_cluster)
